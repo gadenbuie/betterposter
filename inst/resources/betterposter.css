@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700|Source+Code+Pro|Source+Sans+Pro:300,700');
+
+@page {
+  size: 46.8in 33.1in;
+  margin: 0;
+}
+html, body {
+  background: #fff;
+}
+html {
+  font-family: "Roboto";
+  font-size: 24px;
+  color: #222;
+  width: 46.8in;
+  height: 33.09669in;
+  /*border: dashed 3px #a0a0a0;*/
+}
+body {
+  margin: 0;
+  width: 45.8in;
+  height: 32.09669in;
+  display: grid;
+  grid-gap: 0.25in;
+  grid-template-columns: 60px 60px;
+  padding: 0.5in !important;
+}
+
+/* ---- Grid ---- */
+body {
+  grid-template-areas:
+    "T T H H H H H H A A"
+    "S S H H H H H H A A";
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr 5fr;
+}
+
+.hero {
+  grid-area: H;
+}
+
+.left-bar {
+  grid-area: S;
+}
+
+.right-bar {
+  grid-area: A;
+}
+.title {
+  grid-area: T;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  background: #0F5D4F;
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  padding: 10%;
+  font-size: 48px;
+}
+
+.hero h1 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 3.25em;
+  font-weight: 400;
+  padding-top: 15%;
+}
+
+.hero h1 strong {
+  font-weight: 700;
+}
+
+.hero p {
+  padding: 10pt 0;
+}
+
+.hero p:first-of-type {
+  padding-top: 6em;
+}
+
+.hero img.qrcode {
+  position: absolute;
+  bottom: 5%;
+}
+
+
+/* ---- Title ---- */
+.title {
+  padding: 5% 5% 0 5%;
+  background: none;
+}
+
+.title h4 {
+  color: #888;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+.title h4.author { font-style: italic; }
+.title h4.affiliation { font-weight: normal; }
+
+/* ---- Silent Bar ---- */
+.left-bar {
+  background: none;
+  padding: 0 5%;
+}
+
+/* ---- Ammo Bar ---- */
+.right-bar {
+  background: #fff;
+  padding: 5%;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  margin-block-end: 0;
+  font-family: "Roboto Slab";
+}
+
+p {
+  margin-block-start: 0.25em;
+}
+
+code, pre {
+  font-family: "Source Code Pro", Monaco, monospace;
+  font-size: 0.8em;
+  margin: 0.25em 0;
+}
+
+/* ---- Tables ---- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background: #f8f8f8;
+}
+
+table td,
+table th {
+  border-bottom: .05rem solid #dadee4;
+  padding: .2rem .2rem;
+  font-size: small;
+}
+
+table th {
+  border-bottom-width: .1rem;
+}

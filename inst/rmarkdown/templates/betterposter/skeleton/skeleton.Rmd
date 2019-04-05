@@ -1,0 +1,102 @@
+---
+title: |
+  epiTAD: a web application for visualizing high throughput chromosome
+  conformation capture data in the context of genetic epidemiology
+author:
+  - Jordan H Creed
+  - Garrick Aden-Buie
+  - Alvaro N Monteiro
+  - Travis Gerke
+affilitation:
+  - Moffitt Cancer Center
+date: "`r Sys.Date()`"
+output: 
+  betterposter::poster_better:
+    self_contained: false
+# bibliography: packages.bib
+# references:
+#   - id: remarkjs
+#     author:
+#     - family: Bang
+#       given: Ole Petter
+#     title: 'A simple, in-browser, markdown-driven slideshow tool'
+#     issued:
+#       year: 2018
+#     URL: https://remarkjs.com
+#   - id: naruto
+#     author:
+#     - family: Kishimoto
+#       given: Masashi
+#     title: 'Naruto Shippūden'
+#     issued:
+#       year: 2007
+#     URL: https://en.wikipedia.org/wiki/Naruto
+---
+
+
+::::::::::::::::::::::::: hero
+
+# **Main finding** goes here, translated into **plain english**. **Emphasize** the important words.
+
+Additional text or content (because people probably will).
+
+Founders scrum project growth hacking equity. Handshake user experience traction scrum project graphical user interface network effects stealth gen-z research & development. Business model canvas social media responsive web design buzz strategy series A financing early adopters hypotheses infrastructure marketing.
+
+<img class="qrcode" src="http://api.qrserver.com/v1/create-qr-code/?data=HelloWorld!&size=250x250&bgcolor=0F5D4F&color=fff"/>
+
+:::::::::::::::::::::::::
+
+
+
+:::::::::::::::::::: left-bar
+
+## Abstract
+
+The increasing availability of public data resources coupled with advancements in genomic technology has created vast opportunities for researchers to examine the genome on a large and complex scale. To meet the need for integrative genome wide exploration, we present epiTAD.
+
+## Methods
+
+1. The Hi-C reads provided in epiTAD are from human fibroblast IMR90
+
+2. TAD boundaries were also taken from the Dixon experiments
+
+3. Linkage disequilibrium (LD) measures are queried
+from HaploReg
+
+4. eQTLs are obtained through
+GTEx Version 7
+
+## Implementation
+
+epiTAD is available for public use online at the author’s website <https://apps.gerkelab.com/epiTAD>
+
+![](screenshot.png)
+
+::::::::::::::::::::
+
+
+:::::::::::::::::::: right-bar
+
+# Extra Tables & Figures
+
+## Cars are fast
+
+```{r eval=TRUE, echo=TRUE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+
+mtcars %>%
+  skimr::skim_to_wide() %>%
+  select(variable, n, mean, sd, p0, p50, p100) %>%
+  knitr::kable(format = "html")
+```
+
+## Flowers are pretty
+
+```{r, fig.width=6, fig.height = 3}
+ggplot(iris) +
+  aes(Petal.Length, Petal.Width, color = Species) +
+  geom_point()
+```
+
+::::::::::::::::::::
